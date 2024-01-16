@@ -1,8 +1,12 @@
 import 'package:checklist_app/classes/theme_manager.dart';
-import 'package:checklist_app/pages/main/home.dart';
+import 'package:checklist_app/pages/auth/auth.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -13,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const AuthOrMainPage(),
       theme: ThemeManager.currentTheme(),
     );
   }

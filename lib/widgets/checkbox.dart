@@ -15,10 +15,11 @@ class _MyCheckBoxState extends State<MyCheckBox> {
     return GestureDetector(
       child: Container(
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.onBackground,
-          borderRadius: BorderRadius.circular(10),
+            color: Theme.of(context).colorScheme.onBackground,
+            borderRadius: BorderRadius.circular(10)),
+        child: Center(
+          child: isChecked ? const Icon(Icons.close) : Container(),
         ),
-        child: isChecked ? const Icon(Icons.close) : Container(),
       ),
       onTap: () {
         setState(
