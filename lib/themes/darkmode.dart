@@ -9,9 +9,15 @@ ThemeData darkMode = ThemeData(
       primaryContainer: Color(0XFFD5B895),
       onBackground: Color(0xFFFAF9F6)),
   textTheme: TextTheme(
-    bodyLarge:
-        GoogleFonts.inconsolata(color: const Color(0XFFFAF9F6), fontSize: 30),
-    bodySmall:
-        GoogleFonts.inconsolata(color: const Color(0XFFFAF9F6), fontSize: 10),
+    bodyLarge: GoogleFonts.inconsolata(
+      color: const Color(0XFFFAF9F6),
+      fontSize: 30,
+      fontWeight: FontWeight.w600,
+    ),
+    bodySmall: GoogleFonts.inconsolata(
+      color: const Color(0XFFFAF9F6),
+      fontSize: 23,
+      fontWeight: FontWeight.w500,
+    ),
   ),
 );

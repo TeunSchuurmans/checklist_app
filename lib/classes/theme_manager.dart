@@ -3,7 +3,7 @@ import 'package:checklist_app/themes/lightmode.dart';
 import 'package:flutter/material.dart';
 
 class ThemeManager {
-  static bool _darkMode = false;
+  static bool _darkMode = true;
 
   static ThemeData currentTheme() {
     if (_darkMode == true) {

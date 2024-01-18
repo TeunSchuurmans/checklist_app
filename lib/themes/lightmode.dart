@@ -9,9 +9,15 @@ ThemeData lightMode = ThemeData(
       primaryContainer: Color(0XFFD5B895),
       onBackground: Color(0XFF252525)),
   textTheme: TextTheme(
-    bodyLarge:
-        GoogleFonts.inconsolata(color: const Color(0XFF252525), fontSize: 30),
-    bodySmall:
-        GoogleFonts.inconsolata(color: const Color(0XFF252525), fontSize: 10),
+    bodyLarge: GoogleFonts.inconsolata(
+      color: const Color(0XFF252525),
+      fontSize: 30,
+      fontWeight: FontWeight.w600,
+    ),
+    bodySmall: GoogleFonts.inconsolata(
+      color: const Color(0XFF252525),
+      fontSize: 23,
+      fontWeight: FontWeight.w500,
+    ),
   ),
 );

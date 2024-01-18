@@ -8,8 +8,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-      body: const Center(
-        child: MyCheckBox(),
+      body: Center(
+        child:
+            Text('register page', style: Theme.of(context).textTheme.bodySmall),
       ),
     );
   }
