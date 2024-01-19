@@ -25,15 +25,22 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             MyTextField(
-              hintText: 'email',
+              labelText: 'email',
+              keyboardType: TextInputType.emailAddress,
               controller: emailController,
             ),
             MyTextField(
-              hintText: 'password',
+              labelText: 'password',
+              keyboardType: TextInputType.text,
               controller: passwordController,
               toggleVisibility: true,
             ),
-            const MyButton(content: 'login', function: Auth.login)
+            MyButton(
+              content: 'login',
+              function: () {
+                Auth.login(emailController, passwordController);
+              },
+            )
           ],
         ),
       ),

@@ -20,22 +20,28 @@ class RegisterPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             MyTextField(
-              hintText: 'email',
+              labelText: 'email',
+              keyboardType: TextInputType.emailAddress,
               controller: emailController,
             ),
             MyTextField(
-              hintText: 'password',
+              labelText: 'password',
               controller: passwordController,
+              keyboardType: TextInputType.text,
               toggleVisibility: true,
             ),
             MyTextField(
-              hintText: 'confirm password',
+              labelText: 'confirm password',
+              keyboardType: TextInputType.text,
               controller: confirmPasswordController,
               toggleVisibility: true,
             ),
-            const MyButton(
+            MyButton(
               content: 'register',
-              function: Auth.register,
+              function: () {
+                Auth.register(emailController, passwordController,
+                    confirmPasswordController);
+              },
             )
           ],
         ),

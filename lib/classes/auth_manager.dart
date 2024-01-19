@@ -1,6 +1,6 @@
 import 'dart:ffi';
 
 class Auth {
-  static void login() {}
-  static void register() {}
+  static void login(email, password) {}
+  static void register(email, password, confirmPassword) {}
 }

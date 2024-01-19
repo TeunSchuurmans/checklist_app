@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
 class MyTextField extends StatefulWidget {
-  final String hintText;
+  final String labelText;
+  final TextInputType keyboardType;
   final bool toggleVisibility;
+  final bool required;
   late TextEditingController controller;
   MyTextField({
     super.key,
-    required this.hintText,
+    required this.labelText,
     required this.controller,
     this.toggleVisibility = false,
+    this.required = false,
+    required this.keyboardType,
   });
 
   @override
@@ -16,13 +20,7 @@ class MyTextField extends StatefulWidget {
 }
 
 class _MyTextFieldState extends State<MyTextField> {
-  late bool _obscureText;
-
-  @override
-  void initState() {
-    super.initState();
-    _obscureText = widget.toggleVisibility;
-  }
+  late bool _obscureText = widget.toggleVisibility;
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +32,11 @@ class _MyTextFieldState extends State<MyTextField> {
         alignment: Alignment.centerRight,
         children: [
           TextField(
+            keyboardType: widget.keyboardType,
             obscureText: _obscureText,
             controller: widget.controller,
             decoration: InputDecoration(
-              hintText: widget.hintText,
+              labelText: widget.labelText,
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
                 borderSide: BorderSide(
@@ -62,9 +61,11 @@ class _MyTextFieldState extends State<MyTextField> {
                   )
                 : const Icon(null),
             onPressed: () {
-              setState(() {
-                _obscureText = !_obscureText;
-              });
+              setState(
+                () {
+                  _obscureText = !_obscureText;
+                },
+              );
             },
           )
         ],
