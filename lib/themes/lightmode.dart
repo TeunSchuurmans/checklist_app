@@ -20,4 +20,12 @@ ThemeData lightMode = ThemeData(
       fontWeight: FontWeight.w500,
     ),
   ),
+  iconTheme: const IconThemeData(
+    color: Color(0XFF252525),
+    size: 35,
+  ),
+  drawerTheme: const DrawerThemeData(
+    backgroundColor: Color(0XFFD4D4D4),
+  ),
+  appBarTheme: const AppBarTheme(shadowColor: Colors.transparent),
 );

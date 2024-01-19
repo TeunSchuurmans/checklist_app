@@ -39,8 +39,8 @@ class RegisterPage extends StatelessWidget {
             MyButton(
               content: 'register',
               function: () {
-                Auth.register(emailController, passwordController,
-                    confirmPasswordController);
+                Auth.register(emailController.text, passwordController.text,
+                    confirmPasswordController.text);
               },
             )
           ],

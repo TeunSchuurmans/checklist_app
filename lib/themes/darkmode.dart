@@ -20,4 +20,12 @@ ThemeData darkMode = ThemeData(
       fontWeight: FontWeight.w500,
     ),
   ),
+  iconTheme: const IconThemeData(
+    color: Color(0xFFFAF9F6),
+    size: 35,
+  ),
+  drawerTheme: const DrawerThemeData(
+    backgroundColor: Color(0XFF3D3D3D),
+  ),
+  appBarTheme: const AppBarTheme(shadowColor: Colors.transparent),
 );

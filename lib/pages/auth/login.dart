@@ -38,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
             MyButton(
               content: 'login',
               function: () {
-                Auth.login(emailController, passwordController);
+                Auth.login(emailController.text, passwordController.text);
               },
             )
           ],

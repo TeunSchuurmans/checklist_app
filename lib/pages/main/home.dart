@@ -1,4 +1,3 @@
-import 'package:checklist_app/widgets/checkbox.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,8 +8,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Center(
-        child:
-            Text('register page', style: Theme.of(context).textTheme.bodySmall),
+        child: Text('home', style: Theme.of(context).textTheme.bodySmall),
       ),
     );
   }

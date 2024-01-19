@@ -1,6 +1,6 @@
 import 'package:checklist_app/pages/auth/error.dart';
-import 'package:checklist_app/pages/auth/login.dart';
-import 'package:checklist_app/pages/main/home.dart';
+import 'package:checklist_app/pages/auth/register.dart';
+import 'package:checklist_app/pages/main/main_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -18,11 +18,11 @@ class _AuthOrMainPageState extends State<AuthOrMainPage> {
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (BuildContext context, AsyncSnapshot<User?> snapshot) {
         if (snapshot.hasData) {
-          return const HomePage();
+          return const Main();
         } else if (snapshot.hasError) {
           return const ErrorPage();
         } else {
-          return const LoginPage();
+          return const RegisterPage();
         }
       },
     );
